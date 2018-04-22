@@ -33,6 +33,6 @@
 		</tr>
 		
 	</table>
-	<a href="index.html">Desconectar</a>
+	<a href="home.jsp">Desconectar</a>
 </body>
 </html>

@@ -29,6 +29,12 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 		
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String home(Model model) {
+		model.addAttribute("mensaje", "Acceso a la URL raiz");
+		return "home";
+	}
+	
 	@RequestMapping(value = "/ListaUsuarios", method = RequestMethod.POST)
 	public class ListaUsuarios extends HttpServlet {
 		private static final long serialVersionUID = 1L;
@@ -87,7 +93,7 @@ public class HomeController {
 			
 			if (usuario == null) {
 				if(nom == null && ape == null && ema == null && tel == null && cod == null) {
-					url = "/registro.html";
+					url = "/registrosesion.jsp";
 					getServletContext().getRequestDispatcher(url).forward(request, response);
 				}
 				else {
@@ -103,7 +109,9 @@ public class HomeController {
 				url = "/registro.jsp";
 				getServletContext().getRequestDispatcher(url).forward(request, response);
 			}
+			//return "home";
 		}
+		//return "home";
 	}
 	//return "home";
 }

@@ -41,7 +41,7 @@
 		</c:forEach>
 	</table>
 	<br/>
-	<a href="index.html">Desconectar</a>
+	<a href="home.jsp">Desconectar</a>
 </body>
 </html>
 
